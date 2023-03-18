@@ -22,13 +22,6 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-void ConfigureServices(IServiceCollection services)
-{
-    services.AddMvc();
-
-    services.AddScoped<IStudentService, StudentService>();
-}
-
 var app = builder.Build();
 
 app.UseSwaggerUI(options =>
@@ -42,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseRouting();
 
 app.UseAuthorization();

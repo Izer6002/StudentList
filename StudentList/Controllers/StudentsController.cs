@@ -9,9 +9,9 @@ namespace StudentList.Controllers
     [Route("api/[controller]")]
     public class StudentsController : ControllerBase
     {
-        private readonly IStudentService _studentService;
+        private readonly StudentService _studentService;
 
-        public StudentsController(IStudentService studentService)
+        public StudentsController(StudentService studentService)
         {
             _studentService = studentService;
         }
